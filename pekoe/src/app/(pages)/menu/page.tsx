@@ -1,95 +1,64 @@
+import ClassNames from 'classnames'
+import HattrickImage from '../../_images/hattrick.jpg'
+import CricketImage from '../../_images/cricket.jpg'
+import PracticeImage from '../../_images/practice.jpg'
 import Image from 'next/image'
 import styles from './page.module.css'
 
-export default function Home() {
+export default function Menu() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main className={styles.menu}>
+      <ul className={styles.list}>
+        <li className={styles.item}>
+          <p className={styles.image}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              src={HattrickImage}
+              alt="Hattrick"
+              className={styles.hattrick}
             />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a>
-      </div>
+          <div className={styles.text}>
+            <p className={styles.title}>01</p>
+            <p className={styles.description}>
+              The first player who manages to<br />
+              reduce their score to exactly 0 wins!
+            </p>
+          </div>
+        </li>
+
+        <li className={styles.item}>
+          <div className={ClassNames(styles.text, styles.left)}>
+            <p className={ClassNames(styles.title, styles.left)}>CRICKET</p>
+            <p className={styles.description}>
+              Only the areas of 15, 16, 17, 18, 19, 20, and bull are the target.
+            </p>
+          </div>
+          <p className={styles.image}>
+            <Image
+              src={CricketImage}
+              alt="Cricket"
+              className={styles.cricket}
+            />
+          </p>
+        </li>
+
+        <li className={styles.item}>
+          <p className={styles.image}>
+            <Image
+              src={PracticeImage}
+              alt="Practice"
+              className={styles.practice}
+            />
+          </p>
+          <div className={styles.text}>
+            <p className={styles.title}>PRACTICE</p>
+            <p className={styles.description}>
+            This is the starter!<br />
+            Just keep hitting the high numbers!
+            </p>
+          </div>
+        </li>
+      </ul>
     </main>
   )
 }

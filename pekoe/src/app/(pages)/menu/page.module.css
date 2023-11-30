@@ -21,6 +21,11 @@
     border-radius: 8px;
     cursor: pointer;
 
+    > a {
+      width: 100%;
+      display: flex;
+    }
+
     &:first-child {
       margin: 0;
     }

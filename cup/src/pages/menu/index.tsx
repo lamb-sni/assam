@@ -10,8 +10,8 @@ const Menu = () => {
     <main className={styles.menu}>
       <ul className={styles.list}>
         <li className={ClassNames(styles.item, styles.zeroone)}>
-          <p className={styles.image}>
-            <img src={zerooneImage} alt="Zero One" />
+          <p className={styles.images}>
+            <img src={zerooneImage} alt="Zero One" className={ClassNames(styles.image, styles.zeroone)} />
           </p>
           <div className={styles.text}>
             <p className={styles.title}>01</p>
@@ -28,14 +28,14 @@ const Menu = () => {
             <p className={ClassNames(styles.title, styles.left)}>CRICKET</p>
             <p className={styles.description}>Only the areas of 15, 16, 17, 18, 19, 20, and bull are the target.</p>
           </div>
-          <p className={styles.image}>
-            <img src={cricketImage} alt="Zero One" />
+          <p className={styles.images}>
+            <img src={cricketImage} alt="Cricket" className={ClassNames(styles.image, styles.cricket)} />
           </p>
         </li>
 
         <li className={styles.item}>
-          <p className={styles.image}>
-            <img src={practiceImage} alt="Zero One" />
+          <p className={styles.images}>
+            <img src={practiceImage} alt="Practice" className={ClassNames(styles.image, styles.practice)} />
           </p>
           <div className={styles.text}>
             <p className={styles.title}>PRACTICE</p>

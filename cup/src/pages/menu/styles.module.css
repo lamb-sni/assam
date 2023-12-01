@@ -31,8 +31,8 @@
     }
 
     &:hover {
-      img {
-        &.hattrick {
+      .image {
+        &.zeroone {
           filter: sepia(100%) hue-rotate(300deg) saturate(200%);
         }
 
@@ -47,18 +47,18 @@
     }
   }
 
-  .image {
+  .images {
     width: 60%;
     height: 100%;
   }
 
-  img {
+  .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .3s;
+    transition: 0.3s;
 
-    &.hattrick {
+    &.zeroone {
       clip-path: polygon(0 1%, 100% 1%, 100% 100%, 30% 100%);
       filter: sepia(100%) hue-rotate(300deg) saturate(400%);
       transform: scale(-1, 1);

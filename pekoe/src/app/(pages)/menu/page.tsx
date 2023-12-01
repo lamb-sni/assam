@@ -1,15 +1,75 @@
+'use client'
+
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import ClassNames from 'classnames'
+import { useEffect } from 'react'
+import { motion, useAnimate, usePresence } from 'framer-motion'
 import HattrickImage from '../../_images/hattrick.jpg'
 import CricketImage from '../../_images/cricket.jpg'
 import PracticeImage from '../../_images/practice.jpg'
-import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function Menu() {
+  const router = useRouter()
+  const [isPresent, safeToRemove] = usePresence()
+  const [scope, animate] = useAnimate()
+
+  const listMotion = {
+    hidden: { opacity: 0, },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.05,
+      },
+    },
+    exit: {
+      opacity: 0,
+    },
+  }
+
+  const itemMotion = {
+    hidden: { transform: "translateX(10px)", opacity: 0, },
+    show: { transform: "translateX(0)", opacity: 1, },
+  }
+
+  const itemMotionLeft = {
+    hidden: { transform: "translateX(-10px)", opacity: 0, },
+    show: { transform: "translateX(0)", opacity: 1, },
+  }
+
+  const transition = (pathName: string) => {
+    router.push(pathName)
+  }
+
+  useEffect(() => {
+    return () => {
+      console.log('unmount')
+    }
+  }, [])
+
+  useEffect(() => {
+    console.log(isPresent)
+  }, [isPresent])
+
   return (
-    <main className={styles.menu}>
-      <ul className={styles.list}>
-        <li className={styles.item}>
+    <main className={styles.menu} ref={scope}>
+      <motion.ul
+        variants={listMotion}
+        className={styles.list}
+        initial={'hidden'}
+        animate={'show'}
+        exit={'exit'}
+      >
+        <motion.li
+          variants={itemMotion}
+          className={ClassNames(styles.item, styles.zeroone)}
+          onClick={() => {
+            transition('/zero-one')
+          }}
+        >
           <p className={styles.image}>
             <Image
               src={HattrickImage}
@@ -24,9 +84,12 @@ export default function Menu() {
               reduce their score to exactly 0 wins!
             </p>
           </div>
-        </li>
+        </motion.li>
 
-        <li className={styles.item}>
+        <motion.li
+          variants={itemMotionLeft}
+          className={styles.item}
+        >
           <div className={ClassNames(styles.text, styles.left)}>
             <p className={ClassNames(styles.title, styles.left)}>CRICKET</p>
             <p className={styles.description}>
@@ -40,9 +103,12 @@ export default function Menu() {
               className={styles.cricket}
             />
           </p>
-        </li>
+        </motion.li>
 
-        <li className={styles.item}>
+        <motion.li
+          variants={itemMotion}
+          className={styles.item}
+        >
           <p className={styles.image}>
             <Image
               src={PracticeImage}
@@ -57,8 +123,8 @@ export default function Menu() {
             Just keep hitting the high numbers!
             </p>
           </div>
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
     </main>
   )
 }

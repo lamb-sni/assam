@@ -9,6 +9,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  view-transition-name: menulist;
 
   .item {
     margin: 24px 0 0;
@@ -22,9 +23,9 @@
     cursor: pointer;
     transition: 0.3s;
 
-    > a {
-      width: 100%;
-      display: flex;
+    &.zeroone {
+      view-transition-name: zeroone;
+      contain: paint;
     }
 
     &:first-child {

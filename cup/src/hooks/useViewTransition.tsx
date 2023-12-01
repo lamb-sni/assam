@@ -1,4 +1,5 @@
 import React from 'react'
+import { flushSync } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 
 declare global {
@@ -16,7 +17,9 @@ const useViewTransition = () => {
       }
 
       document.startViewTransition(() => {
-        navigate(newRoute)
+        flushSync(() => {
+          navigate(newRoute)
+        })
       })
 
       return

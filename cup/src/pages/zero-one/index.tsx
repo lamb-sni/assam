@@ -25,6 +25,27 @@ const Menu = () => {
           </div>
         </li>
       </ul>
+
+      <ul className={styles.games}>
+        <li className={styles.item}>
+          <p className={styles.title}>301</p>
+        </li>
+        <li className={styles.item}>
+          <p className={styles.title}>501</p>
+        </li>
+        <li className={styles.item}>
+          <p className={styles.title}>701</p>
+        </li>
+        <li className={styles.item}>
+          <p className={styles.title}>901</p>
+        </li>
+        <li className={styles.item}>
+          <p className={styles.title}>1101</p>
+        </li>
+        <li className={styles.item}>
+          <p className={styles.title}>1501</p>
+        </li>
+      </ul>
     </main>
   )
 }

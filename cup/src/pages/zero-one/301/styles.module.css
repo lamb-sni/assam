@@ -76,30 +76,17 @@
 .games {
   margin: 0 auto;
   width: 80%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 
   .item {
     margin: 32px 0 0;
-    padding: 48px 0;
-    width: calc(33% - 8px);
-    border: 1px solid #fff;
+    padding: 48px;
+    width: 100%;
+    border: 1px solid #800;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
-
-    &:hover {
-      border: 1px solid #800;
-
-      .title {
-        color: #800;
-      }
-    }
-
-    &.three {
-      view-transition-name: three-zero-one;
-    }
+    pointer-events: none;
+    view-transition-name: three-zero-one;
   }
 
   .title {
@@ -107,7 +94,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #800;
     font-size: 28px;
     transition: 0.3s;
   }

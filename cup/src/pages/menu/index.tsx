@@ -23,7 +23,7 @@ const Menu = () => {
           </div>
         </li>
 
-        <li className={styles.item}>
+        <li className={ClassNames(styles.item, styles.cricket)}>
           <div className={ClassNames(styles.text, styles.left)}>
             <p className={ClassNames(styles.title, styles.left)}>CRICKET</p>
             <p className={styles.description}>Only the areas of 15, 16, 17, 18, 19, 20, and bull are the target.</p>
@@ -33,7 +33,7 @@ const Menu = () => {
           </p>
         </li>
 
-        <li className={styles.item}>
+        <li className={ClassNames(styles.item, styles.practice)}>
           <p className={styles.images}>
             <img src={practiceImage} alt="Practice" className={ClassNames(styles.image, styles.practice)} />
           </p>

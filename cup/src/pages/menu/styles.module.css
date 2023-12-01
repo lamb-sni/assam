@@ -20,6 +20,7 @@
     border: 1px solid #fff;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 
     > a {
       width: 100%;
@@ -31,17 +32,35 @@
     }
 
     &:hover {
+      &.zeroone {
+        .title {
+          color: #800;
+        }
+      }
+
+      &.cricket {
+        .title {
+          color: #039;
+        }
+      }
+
+      &.practice {
+        .title {
+          color: #030;
+        }
+      }
+
       .image {
         &.zeroone {
-          filter: sepia(100%) hue-rotate(300deg) saturate(200%);
+          filter: sepia(100%) hue-rotate(300deg) saturate(400%);
         }
 
         &.cricket {
-          filter: sepia(100%) hue-rotate(180deg) saturate(200%);
+          filter: sepia(100%) hue-rotate(180deg) saturate(400%);
         }
 
         &.practice {
-          filter: sepia(100%) hue-rotate(90deg) saturate(200%);
+          filter: sepia(100%) hue-rotate(90deg) saturate(400%);
         }
       }
     }
@@ -60,18 +79,18 @@
 
     &.zeroone {
       clip-path: polygon(0 1%, 100% 1%, 100% 100%, 30% 100%);
-      filter: sepia(100%) hue-rotate(300deg) saturate(400%);
+      filter: sepia(100%) hue-rotate(300deg) saturate(200%);
       transform: scale(-1, 1);
     }
 
     &.cricket {
       clip-path: polygon(0 1%, 100% 1%, 100% 100%, 30% 100%);
-      filter: sepia(100%) hue-rotate(180deg) saturate(400%);
+      filter: sepia(100%) hue-rotate(180deg) saturate(200%);
     }
 
     &.practice {
       clip-path: polygon(0 1%, 100% 1%, 70% 99%, 0 100%);
-      filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+      filter: sepia(100%) hue-rotate(90deg) saturate(200%);
     }
   }
 
@@ -93,6 +112,7 @@
     font-size: 36px;
     text-align: right;
     border-bottom: 2px solid #fff;
+    transition: 0.3s;
 
     &.left {
       text-align: left;

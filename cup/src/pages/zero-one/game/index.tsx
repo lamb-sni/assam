@@ -44,6 +44,23 @@ const Game = () => {
     }
   }
 
+  const undoScoredState = () => {
+    if (scored.third) {
+      setScored({ ...scored, third: null })
+      return
+    }
+
+    if (scored.second) {
+      setScored({ ...scored, second: null })
+      return
+    }
+
+    if (scored.first) {
+      setScored({ ...scored, first: null })
+      return
+    }
+  }
+
   return (
     <main className={styles.game}>
       <div className={styles.informations}>
@@ -76,7 +93,13 @@ const Game = () => {
             {Object.values(scored).map((v, idx) => {
               return (
                 <li className={styles.item} key={idx}>
-                  {v ? v : '-'}
+                  {(() => {
+                    if (v === 50) {
+                      return 'BULL'
+                    }
+
+                    return v ? v : '-'
+                  })()}
                 </li>
               )
             })}
@@ -167,6 +190,9 @@ const Game = () => {
               }}
               label="OUT"
             />
+          </li>
+          <li className={styles.item}>
+            <Button onClick={undoScoredState} label="UNDO" />
           </li>
         </ul>
       </div>

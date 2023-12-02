@@ -1,0 +1,70 @@
+.wrapper {
+  width: 100%;
+
+  .button {
+    padding: 16px 0;
+    width: 100%;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.3s;
+
+    &:hover {
+      color: #999;
+      border-color: #999;
+    }
+
+    &.red {
+      &:hover {
+        color: #800;
+        border-color: #800;
+      }
+
+      &.focused {
+        border-color: #800;
+        background-color: #800;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    &.blue {
+      &:hover {
+        color: #039;
+        border-color: #039;
+      }
+
+      &.focused {
+        border-color: #039;
+        background-color: #039;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    &.green {
+      &:hover {
+        color: #030;
+        border-color: #030;
+      }
+
+      &.focused {
+        border-color: #030;
+        background-color: #030;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    &.disabled {
+      color: #333;
+      border-color: #333;
+      pointer-events: none;
+    }
+  }
+}

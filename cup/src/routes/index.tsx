@@ -4,6 +4,7 @@ import Menu from '@/pages/menu'
 
 // zero-one
 import ZeroOne from '@/pages/zero-one'
+import ZeroOneGame from '@/pages/zero-one/game'
 import ThreeZeroOne from '@/pages/zero-one/301'
 
 const RoutesList = () => {
@@ -12,8 +13,9 @@ const RoutesList = () => {
       <Route path="/menu" element={<Menu />} />
 
       {/* zero-one */}
-      <Route path="zero-one" element={<ZeroOne />} />
-      <Route path="301" element={<ThreeZeroOne />} />
+      <Route path="/zero-one" element={<ZeroOne />} />
+      <Route path="/zero-one/game" element={<ZeroOneGame />} />
+      <Route path="/301" element={<ThreeZeroOne />} />
     </Routes>
   )
 }

@@ -1,101 +1,26 @@
-.menu {
+.game {
   height: 100vh;
   background-color: #000;
   position: relative;
 }
 
-.list {
-  margin: 0 auto;
-  padding: 48px 0 0;
-  width: 80%;
-  position: static;
-  view-transition-name: menulist;
-
-  .item {
+.inputs {
+  .multiplier {
     width: 100%;
-    height: 200px;
     display: flex;
-    flex-wrap: none;
-    background: #000;
-    border-bottom: 1px solid #fff;
-    cursor: auto;
-    pointer-events: none;
-    transition: 0.3s;
 
-    &.zeroone {
-      view-transition-name: zeroone;
-      contain: paint;
-
-      .title {
-        color: #800;
-      }
+    .item {
+      width: 33.33%;
     }
   }
 
-  .images {
-    width: 60%;
-    height: 100%;
-  }
-
-  .image {
+  .score {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.3s;
+    display: flex;
+    flex-wrap: wrap;
 
-    &.zeroone {
-      clip-path: polygon(0 1%, 100% 1%, 100% 100%, 30% 100%);
-      filter: sepia(100%) hue-rotate(300deg) saturate(400%);
-      transform: scale(-1, 1);
+    .item {
+      width: 14.28%;
     }
-  }
-
-  .text {
-    padding: 0 16px 0 0;
-    width: 40%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .title {
-    padding-bottom: 8px;
-    font-size: 36px;
-    text-align: right;
-    border-bottom: 2px solid #fff;
-    transition: 0.3s;
-  }
-
-  .description {
-    margin-top: 8px;
-    font-size: 12px;
-  }
-}
-
-.games {
-  margin: 0 auto;
-  width: 80%;
-
-  .item {
-    margin: 32px 0 0;
-    padding: 48px;
-    width: 100%;
-    border: 1px solid #800;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    pointer-events: none;
-    view-transition-name: three-zero-one;
-  }
-
-  .title {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #800;
-    font-size: 28px;
-    transition: 0.3s;
   }
 }

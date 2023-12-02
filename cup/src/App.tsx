@@ -1,5 +1,6 @@
 import Routes from './routes'
 import 'ress'
+import './App.css'
 
 function App() {
   return (

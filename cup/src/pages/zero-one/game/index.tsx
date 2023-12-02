@@ -61,6 +61,10 @@ const Game = () => {
     }
   }
 
+  const changePlayer = () => {
+    console.log('changePlayer')
+  }
+
   return (
     <main className={styles.game}>
       <div className={styles.informations}>
@@ -129,6 +133,10 @@ const Game = () => {
       </div>
 
       <div className={styles.inputs}>
+        <div className={styles.change}>
+          <Button onClick={changePlayer} label="CHANGE PLAYER" focusedColor="red" />
+        </div>
+
         <ul className={styles.multiplier}>
           <li className={styles.item}>
             <Button

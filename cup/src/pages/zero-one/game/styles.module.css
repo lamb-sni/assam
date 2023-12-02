@@ -125,7 +125,13 @@
   width: calc(100% - 96px);
   bottom: 48px;
 
+  .change {
+    margin: 0 auto;
+    width: 50%;
+  }
+
   .multiplier {
+    margin: 24px 0 0;
     width: 100%;
     display: flex;
 
@@ -135,7 +141,6 @@
   }
 
   .score {
-    margin: 8px 0 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;

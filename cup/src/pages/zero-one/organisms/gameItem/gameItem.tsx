@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import styles from '../../styles.module.css'
+import styles from '@/pages/zero-one/styles.module.css'
 import classNames from 'classnames'
 import { type ZERO_ONE_TYPES } from '@/constants/zeroOne'
 import useViewTransition from '@/hooks/useViewTransition'

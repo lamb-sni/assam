@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import styles from '../../styles.module.css'
+import styles from '@/pages/zero-one/styles.module.css'
 import { ZERO_ONE_TYPES } from '@/constants/zeroOne'
-import GameItem from '../gameItem/gameItem'
+import GameItem from '@/pages/zero-one/organisms/gameItem/gameItem'
 
 const GameList = () => {
   const variants = {
